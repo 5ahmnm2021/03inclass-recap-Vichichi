@@ -5,43 +5,54 @@ using UnityEngine.UI;
 
 public class rechner : MonoBehaviour
 {
-    public InputField Input1;
-    public InputField Input2;
+    public InputField input1;
+    public InputField input2;
 
     int ersteNummer;
     int zweiteNummer; 
 
-    int Ergebnis;
+    int ergebnis;
 
-    public Text ErgebnisTxt;
+    public Text ergebnisTxt;
+
+    bool num1 = true;
+    bool num2 = true;
 
     public void AddNumbers()
     {
         try
         {
-            ersteNummer = int.Parse(Input1.text);
-            Input1.image.color = Color.white;
+            ersteNummer = int.Parse(input1.text);
+            input1.image.color = Color.white;
+            num1 = true;
         }
 
         catch (System.Exception)
         {
-            Input1.image.color = Color.red;
-            Input1.text = "Geben Sie eine gültige Zahl ein";
+            input1.image.color = Color.red;
+            input1.text = "Geben Sie eine gültige Zahl ein";
+            num1 = false;
         }
 
         try
         {
-            zweiteNummer = int.Parse(Input2.text);
-            Input2.image.color = Color.white;
+            zweiteNummer = int.Parse(input2.text);
+            input2.image.color = Color.white;
+            num2 = true;
         }
 
         catch (System.Exception)
         {
-            Input2.image.color = Color.white;
-            Input2.text = "Geben Sie eine gültige Zahl ein";
+            input2.image.color = Color.red;
+            input2.text = "Geben Sie eine gültige Zahl ein";
+            num2 = false;
         }
-        Ergebnis = ersteNummer + zweiteNummer;
 
-        ErgebnisTxt.text = Ergebnis.ToString();
+        if(num1 && num2)
+        {
+            ergebnis = ersteNummer + zweiteNummer;
+
+            ergebnisTxt.text = ergebnis.ToString();
+        }
     }
 }

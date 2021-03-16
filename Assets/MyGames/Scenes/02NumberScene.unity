@@ -1095,9 +1095,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18992fa733671694db010399d2661cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Input1: {fileID: 560777288}
-  Input2: {fileID: 1888031759}
-  ErgebnisTxt: {fileID: 2071445588}
+  input1: {fileID: 560777288}
+  input2: {fileID: 1888031759}
+  ergebnisTxt: {fileID: 2071445588}
 --- !u!4 &1546208812
 Transform:
   m_ObjectHideFlags: 0
