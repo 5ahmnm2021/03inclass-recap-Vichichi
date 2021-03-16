@@ -15,38 +15,31 @@ public class rechner : MonoBehaviour
 
     public Text ErgebnisTxt;
 
-    void Update()
-    {
-        ersteNummer = int.Parse(Input1.text);
-        zweiteNummer = int.Parse(Input2.text);
-    }
-
     public void AddNumbers()
     {
-        //-------------------------
-        int value = 0;
-
-        if (int.TryParse(Input1.text, out value)) // or float.TryParse, or double.TryParse etc
+        try
         {
+            ersteNummer = int.Parse(Input1.text);
             Input1.image.color = Color.white;
         }
-        else
+
+        catch (System.Exception)
         {
-            Input1.text = "Geben Sie eine gültige Zahl ein";
             Input1.image.color = Color.red;
+            Input1.text = "Geben Sie eine gültige Zahl ein";
         }
 
-        if (int.TryParse(Input2.text, out value))
+        try
         {
-            Input1.image.color = Color.white;
+            zweiteNummer = int.Parse(Input2.text);
+            Input2.image.color = Color.white;
         }
-        else
+
+        catch (System.Exception)
         {
+            Input2.image.color = Color.white;
             Input2.text = "Geben Sie eine gültige Zahl ein";
-            Input2.image.color = Color.red;
         }
-        //--------------------------------
-
         Ergebnis = ersteNummer + zweiteNummer;
 
         ErgebnisTxt.text = Ergebnis.ToString();
