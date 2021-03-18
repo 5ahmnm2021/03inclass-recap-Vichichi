@@ -1274,7 +1274,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1546208811}
-        m_TargetAssemblyTypeName: rechner, Assembly-CSharp
+        m_TargetAssemblyTypeName: Rechner, Assembly-CSharp
         m_MethodName: AddNumbers
         m_Mode: 1
         m_Arguments:

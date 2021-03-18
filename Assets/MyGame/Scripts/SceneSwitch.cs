@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
-public class sceneswitch : MonoBehaviour
+public class SceneSwitch : MonoBehaviour
 {
     public void Color()
     {

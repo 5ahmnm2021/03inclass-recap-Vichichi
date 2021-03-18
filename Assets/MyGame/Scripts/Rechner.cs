@@ -1,25 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class rechner : MonoBehaviour
+public class Rechner : MonoBehaviour
 {
     public InputField input1;
     public InputField input2;
 
-    int ersteNummer;
-    int zweiteNummer; 
-
-    int ergebnis;
-
     public Text ergebnisTxt;
 
-    bool num1 = true;
-    bool num2 = true;
+    private bool num1 = true;
+    private bool num2 = true;
 
     public void AddNumbers()
     {
+        int ersteNummer = 0;
+        int zweiteNummer = 0;
+
+        int ergebnis = 0;
+
+        string fehlerTxt = "Geben Sie eine gültige Zahl ein";
+
         try
         {
             ersteNummer = int.Parse(input1.text);
@@ -30,7 +30,7 @@ public class rechner : MonoBehaviour
         catch (System.Exception)
         {
             input1.image.color = Color.red;
-            input1.text = "Geben Sie eine gültige Zahl ein";
+            input1.text = fehlerTxt;
             num1 = false;
         }
 
@@ -44,7 +44,7 @@ public class rechner : MonoBehaviour
         catch (System.Exception)
         {
             input2.image.color = Color.red;
-            input2.text = "Geben Sie eine gültige Zahl ein";
+            input2.text = fehlerTxt;
             num2 = false;
         }
 

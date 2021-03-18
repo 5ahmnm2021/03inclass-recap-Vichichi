@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MyGames/Scenes/00WelcomeScene.unity
+    path: Assets/MyGame/Scenes/00WelcomeScene.unity
     guid: 857a709863f30064cbb6fb448d5fa976
   - enabled: 1
-    path: Assets/MyGames/Scenes/01ColorScene.unity
+    path: Assets/MyGame/Scenes/01ColorScene.unity
     guid: d1f65a010edafbf4b9e7a15529866dea
   - enabled: 1
-    path: Assets/MyGames/Scenes/02NumberScene.unity
+    path: Assets/MyGame/Scenes/02NumberScene.unity
     guid: ea2bd19c0e9fdd740897ce2b319315d8
   m_configObjects: {}
